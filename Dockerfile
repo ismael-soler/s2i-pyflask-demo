@@ -2,11 +2,11 @@ FROM python:alpine
 
 COPY . .
 
-RUN chgrp -R 0 /some/directory && \
-    chmod -R g=u /some/directory
+RUN chgrp -R 0 / && \
+    chmod -R g=u /
 
 
-WORKDIR /some/directory
+WORKDIR /
 
 RUN pip install -r requirements.txt
 
